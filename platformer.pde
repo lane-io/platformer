@@ -5,10 +5,11 @@ FWorld world;
 PImage map;
 int x = 0;
 int y = 0;
-int gridSize = 65;
+int gridSize = 80;
 
 FBox player1;
 FBomb bomb = null;
+//ArrayList<FBox> objects = null;
 float vx;
 
 int zoom;
@@ -29,7 +30,8 @@ void setup() {
   world = new FWorld(0, 0, 10000, 10000);
   world.setGravity(0, 2000);
 
-  map = loadImage ("platformerMap.png");
+  //map = loadImage ("platformerMap.png");
+  map = loadImage ("complexMap.png");
   zoom = 5;
 
   while (y < map.height) {
@@ -71,13 +73,13 @@ void draw() {
 
 
   vx = 0;
-  if (leftkey) vx = -300;
-  if (rightkey) vx = 300;
+  if (akey) vx = -300;
+  if (dkey) vx = 300;
 
   player1.setVelocity(vx, player1.getVelocityY());
 
   ArrayList<FContact> contacts = player1.getContacts();
-  if (upkey && contacts.size() > 0) player1.setVelocity (player1.getVelocityX(), -500);
+  if (wkey && contacts.size() > 0) player1.setVelocity (player1.getVelocityX(), -500);
   
   if (spacekey && bomb == null) {
     bomb = new FBomb();
