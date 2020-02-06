@@ -5,7 +5,7 @@ FWorld world;
 PImage map;
 int x = 0;
 int y = 0;
-int gridSize = 80;
+int gridSize = 85;
 
 FBox player1;
 FBomb bomb = null;

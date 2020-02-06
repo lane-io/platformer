@@ -13,7 +13,7 @@ class FBomb extends FBox {
   void act() {
     timer--;
     if (timer == 0) {
-      explode();
+      bomb.explode();
       world.remove(this);
       bomb = null;
     }
