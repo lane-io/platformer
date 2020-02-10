@@ -18,7 +18,7 @@ void keyReleased() {
   if (key == 's' || key == 'S') skey = false;
   if (key == 'd' || key == 'D') dkey = false;
   
-  if (key == ' ') spacekey = true;
+  if (key == ' ') spacekey = false;
   
   if (keyCode == UP) upkey = false;
   if (keyCode == LEFT) leftkey = false;

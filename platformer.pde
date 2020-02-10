@@ -44,6 +44,7 @@ void setup() {
       b.setPosition(x*gridSize, y*gridSize);
       b.setStatic(true);
       world.add(b);
+      boxes.add(b);
     }
 
     x++;
